@@ -23,28 +23,32 @@ public class ReadWriteExcelFile {
     public static void readXLSFile() throws IOException
     {
         InputStream ExcelFileToRead = new FileInputStream("E:/excel/Test.xls");
-        HSSFWorkbook wb = new HSSFWorkbook(ExcelFileToRead);
+        XSSFWorkbook wb = new XSSFWorkbook(ExcelFileToRead);
+//        HSSFWorkbook wb = new HSSFWorkbook(ExcelFileToRead);
 
-        HSSFSheet sheet=wb.getSheetAt(0);
-        HSSFRow row;
-        HSSFCell cell;
+//        HSSFSheet sheet=wb.getSheetAt(0);
+//        HSSFRow row;
+//        HSSFCell cell;
+        XSSFSheet sheet = wb.getSheetAt(0);
+        XSSFRow row;
+        XSSFCell cell;
 
         Iterator rows = sheet.rowIterator();
 
         while (rows.hasNext())
         {
-            row=(HSSFRow) rows.next();
+            row=(XSSFRow) rows.next();
             Iterator cells = row.cellIterator();
 
             while (cells.hasNext())
             {
-                cell=(HSSFCell) cells.next();
+                cell=(XSSFCell) cells.next();
 
-                if (cell.getCellType() == HSSFCell.CELL_TYPE_STRING)
+                if (cell.getCellType() == XSSFCell.CELL_TYPE_STRING)
                 {
                     System.out.print(cell.getStringCellValue()+" ");
                 }
-                else if(cell.getCellType() == HSSFCell.CELL_TYPE_NUMERIC)
+                else if(cell.getCellType() == XSSFCell.CELL_TYPE_NUMERIC)
                 {
                     System.out.print(cell.getNumericCellValue()+" ");
                 }
@@ -93,7 +97,7 @@ public class ReadWriteExcelFile {
 
     public static void readXLSXFile() throws IOException
     {
-        InputStream ExcelFileToRead = new FileInputStream("E:/excel/Test.xls");
+        InputStream ExcelFileToRead = new FileInputStream("E:/excel/Test.xlsx");
         XSSFWorkbook  wb = new XSSFWorkbook(ExcelFileToRead);
 
         XSSFWorkbook test = new XSSFWorkbook();
@@ -132,7 +136,7 @@ public class ReadWriteExcelFile {
 
     public static void writeXLSXFile() throws IOException {
 
-        String excelFileName = "E:/excel/Test001.xls";//name of excel file
+        String excelFileName = "E:/excel/Test001.xlss";//name of excel file
 
         String sheetName = "name";//name of sheet
 

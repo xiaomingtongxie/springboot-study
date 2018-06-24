@@ -12,12 +12,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @Author: 17080697
- * @Description:
- * @Date: Created by on 2018/3/7.
- * @Modified by:
- */
 //@RunWith(SpringJUnit4ClassRunner.class)
 @RunWith(SpringRunner.class)
 //指定SpringBoot工程的Application启动类
@@ -39,11 +33,11 @@ public class MailControllerTest {
         mailBean.setSubject("你好");
 
         List<String> recipients = new ArrayList<>();
-        recipients.add("17080697@cnsuning.com");
+        recipients.add("2333@163.com");
         mailBean.setRecipients(recipients);
 
         MailContent content = new MailContent();
-        content.setContent("夏部长 你好，我司正式录取你了。");
+        content.setContent("这特么的是什么。");
         content.setDate("123");
         content.setSubject("123");
         mailBean.setContent(content);

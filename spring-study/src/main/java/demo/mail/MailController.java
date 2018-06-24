@@ -29,11 +29,11 @@ public class MailController {
         mailBean.setSubject("你好");
 
         List<String> recipients = new ArrayList<>();
-        recipients.add("17080697@cnsuning.com");
+        recipients.add("2333@163.com");
         mailBean.setRecipients(recipients);
 
         MailContent content = new MailContent();
-        content.setContent("夏部长 你好，我司正式录取你了。");
+        content.setContent("写代码的时候，悠着点。");
         content.setDate("123");
         content.setSubject("123");
         mailBean.setContent(content);

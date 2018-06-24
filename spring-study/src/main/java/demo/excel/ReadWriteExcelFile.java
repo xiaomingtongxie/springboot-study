@@ -136,7 +136,7 @@ public class ReadWriteExcelFile {
 
     public static void writeXLSXFile() throws IOException {
 
-        String excelFileName = "E:/excel/Test001.xlss";//name of excel file
+        String excelFileName = "E:/excel/Test001.xlsx";//name of excel file
 
         String sheetName = "name";//name of sheet
 
